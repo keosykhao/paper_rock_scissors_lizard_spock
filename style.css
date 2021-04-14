@@ -12,7 +12,7 @@ header{
     padding: 20px;
 }
 header > h1{
-     color: rgb(36, 21, 21);
+     color: slategrey;
      text-align: center;
      font-family: 'Roboto Mono', sans-serif;
      font-size: 45px;
@@ -53,4 +53,13 @@ header > h1{
     text-align: center;
     font-size: 40px;
     font-family: 'Roboto Mono', sans-serif;
+}
+img{
+    width: 75px;
+
+
+}
+.user-choice{
+   display: inline-block;
+
 }
