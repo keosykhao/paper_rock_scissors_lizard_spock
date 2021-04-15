@@ -5,7 +5,7 @@ let computerScore = 0;
 const playerScore_span = document.getElementById("player-score");
 const computerScore_span = document.getElementById("computer-score");
 const scoreKeeper_div = document.querySelector(".score-keeper");
-const result_div = document.querySelector(".result");
+const result_p = document.querySelector(".result > p");
 const rock_div = document.getElementById("rock");
 const paper_div = document.getElementById("paper");
 const scissors_div = document.getElementById("scissors");
@@ -20,17 +20,23 @@ function getcomputerChoice (){
     const randomNumber = Math.floor(Math.random() * 5);
     return choices [randomNumber];
 }
-function win(){
+function win(playerChoice, computerChoice){
     playerScore++;
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
+    result_p.innerHTML = playerChoice + " beats " + computerChoice + ". You win!";
 }
-function lose(){
-    console.log("lost");
+function lose(playerChoice, computerChoice){
+    computerScore++;
+    playerScore_span.innerHTML = playerScore;
+    computerScore_span.innerHTML = computerScore;
+    result_p.innerHTML = `${playerChoice} loses ${computerChoice}. You lose!`
 }
 
-function draw(){
-    console.log("draw");
+function draw(playerChoice, computerChoice){
+    playerScore_span.innerHTML = playerScore;
+    computerScore_span.innerHTML = computerScore;
+    result_p.innerHTML = `${playerChoice} equals to ${computerChoice}. It's a draw!`
 }
 
 function play(playerChoice){
@@ -48,7 +54,7 @@ function play(playerChoice){
         case "scissorslizard":
         case "rocklizard":
         case "scissorpaper":
-            win();
+            win(playerChoice, computerChoice);
             break;
         case "scissorsrock":
         case "rockpaper":
@@ -60,14 +66,14 @@ function play(playerChoice){
         case "lizardscissors":
         case "lizardrock":
         case "paperscissors":
-                lose();
+                lose(playerChoice, computerChoice);
         break;
         case "rockrock":
         case "paperpaper":
         case "scissorsscissors":
         case "lizardlizard":
         case "spockspock":
-            draw();
+            draw(playerChoice,computerChoice);
             break;
 
 

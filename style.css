@@ -19,6 +19,7 @@ header > h1{
      text-align: center;
      font-family: 'Roboto Mono', sans-serif;
      font-size: 40px;
+     
 
 }
 .score-keeper{
@@ -28,7 +29,7 @@ header > h1{
     text-align: center;
     width: 250px;
     color: white;
-    font-size: 50px;
+    font-size: 40px;
     padding: 20px 25px;
     font-family: 'Roboto Mono', sans-serif;
     position: relative;
@@ -59,10 +60,28 @@ header > h1{
 
 .result > p {
     text-align: center;
-    font-size: 40px;
+    font-weight: bold;
     font-family: 'Roboto Mono', sans-serif;
 }
+.restart{
+    font-family: 'Roboto Mono', sans-serif;
+    width: 150px;
+    height: 75px;
+    border-radius: 9px;
+    border: violet;
+    color:black;
+    background:linear-gradient(to right, #a8ff78, #78ffd6);
+    box-shadow: inset 0 0 0 0 yellowgreen;
+    transition: ease out 0.3;
+    font-size: 2rem;
+    outline: none;
+}
 
+.restart:hover{
+    cursor: pointer;
+    box-shadow: inset 150px 0 0 0 violet;
+    color: black;
+}
 img{
     margin: 0;
     padding: 0;
