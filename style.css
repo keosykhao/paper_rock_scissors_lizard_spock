@@ -55,11 +55,31 @@ header > h1{
     font-family: 'Roboto Mono', sans-serif;
 }
 img{
-    width: 75px;
+    width: 100px;
 
 
 }
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    width: 100vw;
+    position: relative;
+    margin: 10px auto;
+}
 .user-choice{
+    border: 10px solid violet;
+    height: 140px;
+    width: 140px;
+    border-radius: 10px;
+    margin: 20px 20px;
+    padding: 10px;
    display: inline-block;
-
+   transition: all 0.4s ease;
+}
+.user-choice :hover{
+    cursor: pointer;
+    -moz-box-shadow: 0 0 10px rgb(21, 156, 21));
+      -webkit-box-shadow: 0 0 10px rgb(21, 156, 21);
+      box-shadow: 0 0 10px rgb(21, 156, 21));
 }
