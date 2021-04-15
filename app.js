@@ -1,5 +1,5 @@
-const playerScore = 0;
-const computerScore = 0;
+let playerScore = 0;
+let computerScore = 0;
 // use underscore to differentiate DOM elements
 // this is caching the DOM aka storing const for future use
 const playerScore_span = document.getElementById("player-score");
@@ -20,6 +20,19 @@ function getcomputerChoice (){
     const randomNumber = Math.floor(Math.random() * 5);
     return choices [randomNumber];
 }
+function win(){
+    playerScore++;
+    playerScore_span.innerHTML = playerScore;
+    computerScore_span.innerHTML = computerScore;
+}
+function lose(){
+    console.log("lost");
+}
+
+function draw(){
+    console.log("draw");
+}
+
 function play(playerChoice){
     const computerChoice = getcomputerChoice();
     // instead of if statements, we'll use switch statements because it is more efficient to use with fixed values. 
@@ -35,9 +48,7 @@ function play(playerChoice){
         case "scissorslizard":
         case "rocklizard":
         case "scissorpaper":
-            console.log(
-                "Player Wins!"
-            );
+            win();
             break;
         case "scissorsrock":
         case "rockpaper":
@@ -49,19 +60,19 @@ function play(playerChoice){
         case "lizardscissors":
         case "lizardrock":
         case "paperscissors":
-                console.log("Player Loses!");
+                lose();
         break;
         case "rockrock":
         case "paperpaper":
         case "scissorsscissors":
         case "lizardlizard":
         case "spockspock":
-            console.log("It's a tie!")
+            draw();
             break;
-        
 
-        
-        
+
+
+
             }
 
         }
@@ -93,6 +104,3 @@ function main() {
 }
 
 main();
-
-
-

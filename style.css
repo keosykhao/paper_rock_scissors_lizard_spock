@@ -6,6 +6,9 @@
 }
 body{
     background-color: slategrey;
+    @media screen and (max-width: 1200px) and (min-width: 480px)  {
+        background: white;
+    }
 }
 header{
     background: white;
@@ -15,16 +18,16 @@ header > h1{
      color: slategrey;
      text-align: center;
      font-family: 'Roboto Mono', sans-serif;
-     font-size: 45px;
+     font-size: 40px;
 
 }
 .score-keeper{
     margin: 20px auto; 
-    border: 4px solid rgb(49, 4, 4);
+    border: 4px solid white;
     border-radius: 9px;
     text-align: center;
-    width: 400px;
-    color: rgb(58, 36, 11);
+    width: 250px;
+    color: white;
     font-size: 50px;
     padding: 20px 25px;
     font-family: 'Roboto Mono', sans-serif;
@@ -49,13 +52,27 @@ header > h1{
     top: 30px;
     right: -40px
 }
+ .result {
+     font-size: 40px;
+     color: white;
+ }
+
 .result > p {
     text-align: center;
     font-size: 40px;
     font-family: 'Roboto Mono', sans-serif;
 }
+
 img{
+    margin: 0;
+    padding: 0;
     width: 100px;
+    height: 100px;
+   
+    @media (max width: 1200px){
+        display: block;
+        width: 50px;
+    }
 
 
 }
@@ -66,12 +83,18 @@ img{
     width: 100vw;
     position: relative;
     margin: 10px auto;
+    @media screen { min-width: 480px; max-width: 1200px;
+        margin:5px;
+
+        
+        
+    }
 }
 .user-choice{
     border: 10px solid violet;
     height: 140px;
     width: 140px;
-    border-radius: 10px;
+    border-radius: 50%;
     margin: 20px 20px;
     padding: 10px;
    display: inline-block;
@@ -79,7 +102,7 @@ img{
 }
 .user-choice :hover{
     cursor: pointer;
-    -moz-box-shadow: 0 0 10px rgb(21, 156, 21));
-      -webkit-box-shadow: 0 0 10px rgb(21, 156, 21);
-      box-shadow: 0 0 10px rgb(21, 156, 21));
-}
+     background-color: yellow}
+     
+/* Border Animation Pure CSS & HTML - Gradient Border Color youtube vdo by Daily Tuition
+use uigradients.com */
