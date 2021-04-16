@@ -96,12 +96,16 @@ img{
 
 }
 .container{
-    display: grid;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    justify-content: center;
-    width: 100vw;
+    justify-content: space-around;
+    width: 100%;
     position: relative;
-    margin: 10px auto;
+    margin-left: auto;
+    margin-right: auto ;
+    /* margin: 10px auto; */
     @media screen { min-width: 480px; max-width: 1200px;
         margin:5px;
 
@@ -125,3 +129,11 @@ img{
      
 /* Border Animation Pure CSS & HTML - Gradient Border Color youtube vdo by Daily Tuition
 use uigradients.com */
+
+.video{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: center;
+}

@@ -13,9 +13,6 @@ const lizard_div = document.getElementById("lizard");
 const spock_div = document.getElementById("spock");
 let result; 
 
-// make a function for the computer to pick randomly, Math.random will pick any number between 0 and 1,
-// adding Math.floor to Math.random gives us a round number 
-
 
 // create restart function
 let restartButtion = document.getElementById('restart-button');
@@ -25,7 +22,11 @@ function gameRestart(){
     computerScore = 0;
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
+    result_p.innerHTML = `Play`
 }
+
+// make a function for the computer to pick randomly, Math.random will pick any number between 0 and 1,
+// adding Math.floor to Math.random gives us a round number 
 
 
 function getcomputerChoice (){
@@ -33,6 +34,8 @@ function getcomputerChoice (){
     const randomNumber = Math.floor(Math.random() * 5);
     return choices [randomNumber];
 }
+
+// create  a function that tells if you win or lose and make a statement on how you win or lose.
 function win1(playerChoice, computerChoice){
     playerScore += 1;
     playerScore_span.innerHTML = playerScore;
@@ -235,14 +238,19 @@ function play(playerChoice){
         case "spockspock":
             draw(playerChoice,computerChoice);
             break;
-
-
-
-
             }
 
         }
-
+// create a function that ends the game
+function endGame (){
+    if (playerScore === 10){
+        result_p.innerHTML = `YOU ARE THE WINNER!!!!`
+    }
+    else if(computerScore === 10){
+        result_p.innerHTML = `You lost to a computer loser!`
+    }
+    
+}
 
 
 function main() {
