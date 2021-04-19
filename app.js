@@ -14,6 +14,7 @@ const spock_div = document.getElementById("spock");
 let result; 
 
 
+
 // create restart function
 let restartButtion = document.getElementById('restart-button');
 restartButtion.addEventListener('click', gameRestart );
@@ -41,59 +42,69 @@ function win1(playerChoice, computerChoice){
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = playerChoice + " crushes " + computerChoice + ". You win!";
+    endGame ()
 }function win2(playerChoice, computerChoice){
     playerScore += 1;
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = playerChoice + " covers " + computerChoice + ". You win!";
+    endGame ()
 }
 function win3(playerChoice, computerChoice){
     playerScore += 1;
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = playerChoice + " poisons " + computerChoice + ". You win!";
+    endGame ()
 }
 function win4(playerChoice, computerChoice){
     playerScore += 1;
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = playerChoice + " smashes " + computerChoice + ". You win!";
+    endGame ()
 }
 function win5(playerChoice, computerChoice){
     playerScore += 1;
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = playerChoice + " disproves " + computerChoice + ". You win!";
+    endGame ()
 }
 function win6(playerChoice, computerChoice){
     playerScore += 1;
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = playerChoice + " vaporizes " + computerChoice + ". You win!";
+    endGame ()
 }
 function win7(playerChoice, computerChoice){
     playerScore += 1;
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = playerChoice + " eats " + computerChoice + ". You win!";
+    endGame ()
 }
 function win8(playerChoice, computerChoice){
     playerScore += 1;
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = playerChoice + " decapitates " + computerChoice + ". You win!";
+    endGame ()
 }
 function win9(playerChoice, computerChoice){
     playerScore += 1;
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = playerChoice + " smashes " + computerChoice + ". You win!";
+    endGame ()
 }
 function win10(playerChoice, computerChoice){
     playerScore += 1;
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = playerChoice + " cuts " + computerChoice + ". You win!";
+    endGame ()
 }
 
 
@@ -102,60 +113,70 @@ function lose1(playerChoice, computerChoice){
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `${computerChoice} crushes ${playerChoice}. You lose!`;
+    endGame ()
 }
 function lose2(playerChoice, computerChoice){
     computerScore += 1;
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `${computerChoice} covers ${playerChoice}. You lose!`;
+    endGame ()
 }
 function lose3(playerChoice, computerChoice){
     computerScore += 1;
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `${computerChoice} poisons ${playerChoice}. You lose!`;
+    endGame ()
 }
 function lose4(playerChoice, computerChoice){
     computerScore += 1;
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `${computerChoice} smashes ${playerChoice}. You lose!`;
+    endGame ()
 }
 function lose5(playerChoice, computerChoice){
     computerScore += 1;
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `${computerChoice} disproves ${playerChoice}. You lose!`;
+    endGame ()
 }
 function lose6(playerChoice, computerChoice){
     computerScore += 1;
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `${computerChoice} vaporizes ${playerChoice}. You lose!`;
+    endGame ()
 }
 function lose7(playerChoice, computerChoice){
     computerScore += 1;
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `${computerChoice} eats ${playerChoice}. You lose!`;
+    endGame ()
 }
 function lose8(playerChoice, computerChoice){
     computerScore += 1;
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `${computerChoice} decapitates ${playerChoice}. You lose!`;
+    endGame ()
 }
 function lose9(playerChoice, computerChoice){
     computerScore += 1;
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `${computerChoice} smashes ${playerChoice}. You lose!`;
+    endGame ()
 }
 function lose10(playerChoice, computerChoice){
     computerScore += 1;
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `${computerChoice} cuts ${playerChoice}. You lose!`;
+    endGame ()
 }
 
 function draw(playerChoice, computerChoice){
@@ -168,8 +189,13 @@ function draw(playerChoice, computerChoice){
 // Game function
 function play(playerChoice){
     const computerChoice = getcomputerChoice();
+
     // instead of if statements, we'll use switch statements because it is more efficient to use with fixed values. 
     // if-else statements are good to use with Boolean values like true or false
+    
+      
+        
+    
     switch (playerChoice + computerChoice){
         case "rockscissors":
             win1(playerChoice, computerChoice);

@@ -121,11 +121,12 @@ img{
     margin: 20px 20px;
     padding: 10px;
    display: inline-block;
-   transition: all 0.4s ease;
+   
 }
 .user-choice :hover{
     cursor: pointer;
-     background-color: yellow}
+    
+}
      
 /* Border Animation Pure CSS & HTML - Gradient Border Color youtube vdo by Daily Tuition
 use uigradients.com */
