@@ -24,3 +24,4 @@
     *CSS
     *HTML
     *Added a YouTube Video 
+###Some issues this game is that I couldn't figure out how to get a picture of Sheldon Cooper holding up the L sign for loser to pop up when the player loses to the computer.
